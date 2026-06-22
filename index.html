@@ -1,46 +1,329 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحتي</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            direction: rtl;
-            text-align: right;
-            margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            text-align: center;
-            max-width: 500px;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELITE GUARD</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#020617;
+    color:white;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(2,6,23,.9);
+    backdrop-filter:blur(10px);
+    padding:20px 50px;
+    border-bottom:1px solid rgba(251,191,36,.2);
+}
+
+.logo{
+    color:#fbbf24;
+    font-size:28px;
+    font-weight:bold;
+}
+
+section{
+    padding:120px 80px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:72px;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:#fbbf24;
+}
+
+.hero p{
+    font-size:24px;
+    color:#cbd5e1;
+}
+
+.section-title{
+    font-size:42px;
+    margin-bottom:50px;
+    border-right:6px solid #fbbf24;
+    padding-right:20px;
+}
+
+/* الكروت */
+
+.grid-layout{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.card{
+    background:#a3a7b1;
+    border-radius:25px;
+    border-bottom:5px solid #fbbf24;
+    text-align:center;
+    min-height:500px;
+}
+
+.card-body{
+    padding:60px 30px;
+}
+
+.card i{
+    font-size:60px;
+    color:#fbbf24;
+    margin-bottom:30px;
+}
+
+.card h2{
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.card p{
+    font-size:24px;
+    line-height:1.8;
+    color:#f1f5f9;
+}
+
+/* الأقسام */
+
+.two-column{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.image-box{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.image-box img{
+    width:100%;
+    display:block;
+    border-radius:20px;
+}
+
+.text-content p{
+    font-size:22px;
+    line-height:1.9;
+    color:#cbd5e1;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+@media(max-width:900px){
+
+.grid-layout{
+    grid-template-columns:1fr;
+}
+
+.two-column{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+section{
+    padding:100px 20px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>مرحباً! 👋</h1>
-        <p>هذه صفحتي على GitHub Pages</p>
-        <p>يمكنك إضافة أي محتوى تريده هنا</p>
+
+<header>
+    <div class="logo-area">
+        <img src="logo(1).png" alt="ELITE GUARD Logo" class="logo-img">
+        <div class="logo">ELITE GUARD</div>
     </div>
+</header>
+
+<section class="hero">
+
+<div>
+<h1>مؤسسة <span>ELITE GUARD</span> للأمن</h1>
+
+<p>
+شريكك الاستراتيجي في الحماية والتشغيل المنهجي المتكامل
+وصناعة البيئة الآمنة لأعمالك.
+</p>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">ركائز التميز</h2>
+
+<div class="grid-layout">
+
+<div class="card">
+<div class="card-body">
+<i class="fa-solid fa-microchip"></i>
+<h2>تكنولوجيا ذكية</h2>
+<p>
+دمج أنظمة المراقبة الحديثة مع العمليات الميدانية
+لضمان أعلى مستويات الأمان.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<i class="fa-solid fa-user-shield"></i>
+<h2>أفراد النخبة</h2>
+<p>
+كوادر بشرية مدربة ومؤهلة للتعامل مع مختلف
+السيناريوهات الأمنية باحترافية.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<i class="fa-solid fa-eye"></i>
+<h2>تحكم مستمر</h2>
+<p>
+غرفة عمليات مركزية تعمل على مدار الساعة
+لتأمين المواقع ومتابعة الأحداث.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">من نحن</h2>
+
+<div class="two-column">
+
+<div class="text-content">
+<p>
+نحن في ELITE GUARD نقدم رؤية أمنية متطورة
+تتجاوز المفهوم التقليدي للحراسة.
+</p>
+</div>
+
+<div class="image-box">
+<img src="https://th.bing.com/th/id/R.ead25bf85165b595462a6a948d4b218d?rik=nFt5B8DSHXu2NA&riu=http%3a%2f%2fhrasat.com%2fUpload%2fSlideShow%2fb630350f-07d8-4636-9aa5-f172e93c5e80.jpg&ehk=XEjPSkS8Wx0C-Xw8rNwKqQvVzH0%3d&pid=RawPixel">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="operations">
+
+<div class="container">
+
+<h2 class="section-title">القدرة التشغيلية</h2>
+
+<div class="two-column">
+
+<div class="image-box">
+<img src="https://eaglesgroup-security.com/wp-content/uploads/2023/09/security-iStock-625904394.jpeg">
+</div>
+
+<div class="text-content">
+<p>
+تمتلك الشركة بنية تحتية تقنية وعملياتية متكاملة
+تضمن تغطية شاملة لكافة المواقع المؤمنة.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="vip">
+
+<div class="container">
+
+<h2 class="section-title">الحراسات الشخصية VIP</h2>
+
+<div class="two-column">
+
+<div class="text-content">
+<p>
+حماية تنفيذية رفيعة المستوى لرجال الأعمال
+وكبار الشخصيات بأعلى معايير السرية والأمان.
+</p>
+</div>
+
+<div class="image-box">
+<img src="https://eaglesgroup-security.com/wp-content/uploads/2023/09/Ochroniarz-EZT-scaled.jpeg">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+جميع الحقوق محفوظة © 2026 ELITE GUARD
+</footer>
+
 </body>
 </html>
